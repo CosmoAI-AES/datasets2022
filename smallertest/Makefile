@@ -10,8 +10,8 @@ images: train.csv test.csv
 	python3 $PD/datasetgen.py < test.csv
 
 train.csv: sphere-pm.csv
-	head -4001 $< > $@
+	head -701 $< > $@
 
 test.csv: sphere-pm.csv
 	head -1 $< > $@
-	tail -4000 $< >> $@
+	tail -300 $< >> $@
