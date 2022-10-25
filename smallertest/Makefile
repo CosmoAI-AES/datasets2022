@@ -14,11 +14,11 @@ images: .images
 	touch $@
 
 train.csv: smaller-sphere-pm.csv
-	head -701 $< > $@
+	head -641 $< > $@
 
 test.csv: smaller-sphere-pm.csv
 	head -1 $< > $@
-	tail -300 $< >> $@
+	tail -200 $< >> $@
 
 ml: .images
 	python3 $(ML)/MLSystem.py
