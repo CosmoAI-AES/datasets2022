@@ -6,8 +6,8 @@ BD=$(HOME)/git/cosmoai/CosmoSim/bin/
 export PATH := $(PD):$(BD):$(PATH)
 
 images: train.csv test.csv
-	python3 $(PD)/datasetgen.py < train.csv
-	python3 $(PD)/datasetgen.py < test.csv
+	sh $(PD)/datagen.sh < train.csv
+	sh $(PD)/datagen.sh < test.csv
 
 train.csv: smaller-sphere-pm.csv
 	head -701 $< > $@
