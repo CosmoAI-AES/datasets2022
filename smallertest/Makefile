@@ -25,3 +25,6 @@ ml: .images
 
 smaller-sphere-pm.csv: smaller-sphere-pm.py
 	python3 $<
+
+clean:
+	rm -f *.png *.csv
