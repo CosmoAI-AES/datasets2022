@@ -1,10 +1,10 @@
 PD=$(HOME)/git/cosmoai/CosmoSim/Scripts/
 BD=$(HOME)/git/cosmoai/CosmoSim/bin/
 
-export PATH := $PD:$BD:$PATH
+export PATH := $(PD):$(BD):$(PATH)
 
 all: sphere-pm.csv 
-	python3 $PD/datasetgen.py < $<
+	sh $(PD)/datagen.sh < $<
 
 train.csv: sphere-pm.csv
 	head -4001 $< > $@
