@@ -18,7 +18,7 @@ train.csv: smaller-sphere-pm.csv
 
 test.csv: smaller-sphere-pm.csv
 	head -1 $< > $@
-	tail -200 $< >> $@
+	tail -192 $< >> $@
 
 ml: .images
 	python3 $(ML)/MLSystem.py
